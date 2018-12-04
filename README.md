@@ -1,2 +1,2 @@
 # wvGN
-for the submission to KDD 2017
+The codes for the paper "Learning from labeled and Unlabeled Vertices in Networks" accpeted by KDD 2017.
