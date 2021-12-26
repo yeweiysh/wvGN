@@ -4,7 +4,7 @@ lamda = param.lamda;
 l=prob.l;%number of training instances
 n=prob.n;%number of features
 xtrain=prob.x;
-ytrain=prob.y;
+ytrain=double(prob.y);
 
 wpos = sum(ytrain==-1)/sum(ytrain==1);
 wneg = 1;

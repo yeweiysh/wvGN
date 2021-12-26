@@ -19,6 +19,7 @@ for i=1:nClass
 
     [decVal]=predict(ovaSVM{i},xtrain);
     ytrain(ytrain==-1)=0;
+    ytrain=double(ytrain);
     [logitParam{i}] = glmfit(decVal, ytrain, 'binomial', 'link', 'logit');
 end
 

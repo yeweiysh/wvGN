@@ -2,6 +2,7 @@ function [x_val,x_ind,x_ptr]=transport(prob, index)
 n=prob.n;%number of features
 l=prob.l;%number of traininig instances
 y=prob.y;
+y=double(y);
 x=prob.x;
 nl=zeros(1,n);
 elements=prob.l*prob.n-sum(prob.x(:)==0);
