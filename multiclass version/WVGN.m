@@ -11,7 +11,6 @@ X(:,n+1)=ones(n,1);
 
 nClass=size(label,2);
 C=1;
-gamma=10.0/n^2;
 epps=0.01;
 
 param = ParamInitial(C, epps, D);
