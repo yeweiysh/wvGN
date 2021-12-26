@@ -6,6 +6,7 @@ X(:,n+1)=ones(n,1);
 
 degs=sum(A, 2);
 degs(degs==0)=eps;
+D=sparse(1:size(A,1), 1:size(A,2), degs);
 D=spdiags(1./(degs.^0.5), 0, size(D,1), size(D,2));
 
 C=1;
