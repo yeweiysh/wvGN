@@ -1,6 +1,7 @@
 function [result] = WVGN ( Test, Train, label, A)
 
 degs=sum(A, 2);
+D=sparse(1:size(A,1), 1:size(A,2), degs);
 degs(degs==0)=eps;
 D=spdiags(1./(degs.^0.5), 0, size(D,1), size(D,2));
 n=size(A,1);
