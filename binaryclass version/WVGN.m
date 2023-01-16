@@ -1,5 +1,6 @@
 function [result,predlabel] = WVGN ( Test, Train, label, A)
 
+A=sparse(A);
 X=structuralNeighborhoodRepresentation(A,5);
 n=size(A,1);
 X(:,n+1)=ones(n,1);
