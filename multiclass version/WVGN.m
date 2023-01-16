@@ -1,9 +1,10 @@
 function [result] = WVGN ( Test, Train, label, A)
 
+A=sparse(A)
 degs=sum(A, 2);
 degs(degs==0)=eps;
 D=sparse(1:size(A,1), 1:size(A,2), degs);
-D=spdiags(1./(degs.^0.5), 0, size(D,1), size(D,2));
+D=spdiags(1./(degs.^0.5), 0, size(A,1), size(A,2));
 n=size(A,1);
 
 X=structuralNeighborhoodRepresentation(A,5);
